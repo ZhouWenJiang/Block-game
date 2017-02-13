@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Block</title>
+    <meta charset="utf-8">
+    <meta name="description" content="A little logic game by Q42." />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="icon" type="image/png" href="img/icon-1024.png" />
+    <link rel="shortcut icon" href="img/icon-1024.png" />
+    <link rel="apple-touch-icon-precomposed" href="img/icon-1024.png"/>
+    
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <!--script type="text/javascript" src="js/vconsole.min.js"></script-->
+ 		<link href="css/style.css" type="text/css" rel="stylesheet" />
+  	<link href="css/style1.css" type="text/css" rel="stylesheet" />
+    <link href="fonts/fonts.css" type="text/css" rel="stylesheet" />
+    
+  </head>
+  
+  
+  <body bgcolor="#222222">	
+	  <div id="menu" class="screen">
+	        <div class="vertical">
+	            <h1>Block</h1>
+	            <div id="titlegrid" class="board">
+	                <div id="digits">                    
+	                    <span id="zero">0</span><span id="hs"> h h </span><span id="one">1</span>
+	                </div>
+										<table data-grid="titlegrid" cellpadding="0" cellspacing="0"><tbody><tr><td class="odd" data-action="curLevelPage"><div class="tile tile-2"><div class="inner"></div></div></td><td class="even"><div class="tile tile-1"><div class="inner"></div></td></tr></tbody></table>
+	
+	            </div>
+	            <p>
+	                a little logic game<br>by zwj
+	            </p>
+	        </div>
+	   </div>
+  	<div id="levels" class="screen">
+  		<p>Select Level</p>
+  		<div class="board" id="levelsMenu">
+  		</div>
+  		<div id="bar">
+		    <div class="iconcon" data-action="preLevelPage"><div id="left" class="icon"></div></div>
+		    <div class="iconcon" data-action="show-menu"><div id="back" class="icon"></div></div>
+		    <div class="iconcon" data-action="nextLevelPage"><div id="right" class="icon"></div></div>
+    	</div>
+  	</div>
+  	<div id="game" class="screen">
+	  	<p class="board" style="float: left;color: white;" id="levelNum"></p>
+	  	<div class="rule board" id="rule"></div>
+	  	<div class="board" id="board"></div>
+	    <div id="bar">
+		    <div class="iconcon" data-action="curLevelPage"><div id="back" class="icon"></div></div>
+		    <div class="iconcon" data-action="refresh"><div id="undo" class="icon"></div></div>
+		    <div class="iconcon" data-action="tutorial"><div id="rules" class="icon"></div></div>
+		    <div class="iconcon" data-action="saveLevel" style="display: none;"><div id="tweet" class="icon"></div></div>
+    	</div>
+  	</div>
+  	<div id="tutorial" class="screen">
+	  	<span class="board" style="float: left;color: white;width: 75%;margin-top: 7px;text-align: left;font-size: 16px;" id="tutorialText"></span>
+	  	<div class="rule board" id="tutorialRuleDiv"></div>
+	  	<div class="board" id="tutorialDiv"></div>
+	    <div id="bar">
+		    <div class="iconcon" data-action="show-game"><div id="back" class="icon"></div></div>
+		    <div class="iconcon" data-action="tutorial"><div id="undo" class="icon"></div></div>
+    	</div>
+  	</div>
+  	
+		<div class="cd-popup" role="alert">
+			<div class="cd-popup-container">
+				<div class="alert-main-icon"></div>
+				<div class="alert-title">Success!!</div>
+				<ul class="cd-buttons" style="
+		    position: relative;padding: 0;    display: flex;">
+					<li class="alert-menu-btn" data-action="curLevelPage"></li>
+					<li class="alert-refresh-btn" data-action="refresh"></li>
+					<li class="alert-next-btn" data-action="nextLevel"></li>
+				</ul>
+				
+			</div><!-- cd-popup-container -->
+		</div> <!-- cd-popup -->
+  	
+  	
+  	
+  	<div id="feelsize"></div>
+  </body>
+	<script type="text/javascript" src="js/zepto.min.js" ></script>
+	<script type="text/javascript" src="js/views.js" ></script>
+	<script type="text/javascript" src="js/controller.js" ></script>
+	<script type="text/javascript" src="js/levelSelect.js" ></script>
+	<script type="text/javascript" src="js/state.js" ></script>
+	<script type="text/javascript" src="js/strategy/light.js" ></script>
+	<script type="text/javascript" src="js/strategy/knighttour.js" ></script>
+	<script type="text/javascript" src="js/level.js" ></script>
+	<script type="text/javascript" src="js/Main.js" ></script>
+	<script type="text/javascript" src="js/utils.js" ></script>
+	<script type="text/javascript" src="js/grid.js"></script>
+	<script type="text/javascript" src="js/tile.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/zdialog.js" ></script>
+	<script type="text/javascript" src="js/tutorial/lightTutorial.js" ></script>
+	<script type="text/javascript" src="js/lang/cn.js" ></script>
+	<script type="text/javascript" src="js/tutorial/knightTourTutorial.js" ></script>
+	<script type="text/javascript" src="js/howler.min.js" ></script>
+	<script type="text/javascript" src="js/sounds.js" ></script>
+ </html>
